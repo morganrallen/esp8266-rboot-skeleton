@@ -10,8 +10,8 @@
 #include <user_interface.h>
 #include <time.h>
 #include <mem.h>
-#include <rboot-ota.h>
 
+#include "rboot-ota.h"
 #include "main.h"
 #include "user_config.h"
 #include "uart.h"
