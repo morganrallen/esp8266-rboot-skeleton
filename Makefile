@@ -14,9 +14,9 @@
 # `clean` run clean on esptool2, rboot, and rboot-sampleproject with inherited
 #				 configuration
 
+SDK_BASE      ?= esp_iot_sdk_v1.4.0/
 RABURTON_BASE ?= $(abspath raburton)
 ESPTOOL2      ?= $(abspath ${RABURTON_BASE}/esptool2/esptool2)
-SDK_BASE      ?= esp_iot_sdk_v1.4.0/
 RBOOT_INC     ?= -I${RABURTON_BASE}/rboot/appcode -I${RABURTON_BASE}/rboot-sampleproject -I${RABURTON_BASE}/rboot
 RBOOT_LIBDIR     ?= ${RABURTON_BASE}/rboot-sampleproject/build
 
