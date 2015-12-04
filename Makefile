@@ -44,7 +44,7 @@ all: raburton rboot-app
 raburton:
 	@$(MAKE) -C raburton
 
-rboot-app:
+rboot-app: raburton
 	@echo "Building rBoot main project"
 	@$(MAKE) -C src/
 
@@ -52,3 +52,4 @@ clean:
 	@$(MAKE) -C ${RABURTON_BASE}/esptool2 clean
 	@$(MAKE) -C ${RABURTON_BASE}/rboot clean
 	@$(MAKE) -C ${RABURTON_BASE}/rboot-sampleproject clean
+	@$(MAKE) -C src clean
