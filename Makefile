@@ -20,12 +20,16 @@ SDK_BASE      ?= esp_iot_sdk_v1.4.0/
 RBOOT_INC     ?= -I${RABURTON_BASE}/rboot/appcode -I${RABURTON_BASE}/rboot-sampleproject -I${RABURTON_BASE}/rboot
 RBOOT_LIBDIR     ?= ${RABURTON_BASE}/rboot-sampleproject/build
 
+XTENSA_BINDIR ?= $(shell dirname -- `which xtensa-lx106-elf-gcc`)
+
+
 CC = xtensa-lx106-elf-gcc
 LD = xtensa-lx106-elf-gcc
 
 # turn relative into aboslute before proceeding
 SDK_BASE := $(abspath ${SDK_BASE})
 
+$(info XTENSA_BINDIR = ${XTENSA_BINDIR});
 $(info RABURTON_BASE = ${RABURTON_BASE});
 $(info ESPTOOL2 = ${ESPTOOL2});
 $(info SDK_BASE = ${SDK_BASE});
