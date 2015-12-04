@@ -27,7 +27,6 @@ endif
 
 C_FILES = $(wildcard *.c)
 O_FILES = ${RABURTON_BASE}/rboot-sampleproject/build/uart.o
-O_FILES += ${RABURTON_BASE}/rboot-sampleproject/build/rboot-ota.o
 O_FILES += ${RABURTON_BASE}/rboot-sampleproject/build/rboot-api.o
 O_FILES += $(patsubst %.c,$(BUILD_DIR)/%.o,$(C_FILES))
 
